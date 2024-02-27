@@ -45,7 +45,7 @@ export default function HeroSection(props: {
       </div>
       <div className="pt-[5rem]">
         <p className=" text-[1.8rem]">
-          Let's connect and build something amazing together.
+          Let&apos;s connect and build something amazing together.
         </p>
         <div className="flex items-center gap-[2rem] pt-[2rem] text-gray-500">
           {props.accounts.map((item, index) => {

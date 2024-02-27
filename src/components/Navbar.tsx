@@ -55,9 +55,9 @@ export default function Navbar() {
       <div
         className={`${
           activePageIndex === props.index
-            ? " text-white after:top-0 before:border-x-[0.5px] before:border-gray-500"
-            : " bg-transparent text-gray-400 after:top-[100%]"
-        } relative flex items-center py-[1rem] px-[1.8rem] text-[1.1rem] cursor-pointer before:absolute before:left-0 before:bottom-0 before:w-[100%] before:h-full before:z-[-10] before:rounded-t-[1rem] hover:before:border-x-[0.5px] hover:before:border-gray-500 after:absolute after:left-[1%] after:w-[98%] after:h-full after:z-[-10] after:rounded-t-[1rem] after:bg-red-200 after:transition-all after:delay-1000 after:ease-in-out`}
+            ? " bg-[#030308] text-white"
+            : " bg-transparent text-gray-400 "
+        } relative flex items-center py-[1rem] px-[1.8rem] text-[1.1rem] cursor-pointer rounded-t-[1rem]`}
         onClick={() => {
           setActivePageIndex(props.index);
         }}
