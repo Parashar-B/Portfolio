@@ -18,7 +18,10 @@ export default function Home() {
   ];
 
   return (
-    <main className="h-screen flex text-gray-400">
+    <main className="relative h-screen flex text-gray-400">
+      <div className="fixed w-[13rem] right-[5rem] top-0 px-[2rem] py-[1rem] rounded-b-[1rem] font-semibold text-white bg-orange-700">
+            <h4>In Progress, not yet complete</h4>
+        </div>
       {/* <div className="w-full max-w-[110rem] mx-auto h-fit px-[2rem] py-[2rem] border border-gray-500 rounded-[2rem]">
         <h3 className=" text-[2rem]">Hey<span className=" text-[2.5rem]">👋</span>,</h3>
         <h1 className=" text-[3rem] ">I am Parashar a Passionate Frontend Developer</h1>

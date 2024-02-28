@@ -52,6 +52,7 @@ export default function Navbar() {
         {navItems.map((item, index) => {
           return (
             <div
+              key={index}
               className={`${
                 activePageIndex === index
                   ? " bg-[#030308] text-white"
@@ -72,6 +73,8 @@ export default function Navbar() {
           <HiOutlineSun size={15} />
         </div>
         {/* <div className="absolute bg-[#030308] bottom-0 w-[]" ref={pageIndicatorSlider}></div> */}
+        
+        {/* in progress indicator */}
       </div>
     </div>
   );
