@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [activePageIndex, setActivePageIndex] = useState(0);
-  const pageIndicatorSlider = useRef(null);
+  // const pageIndicatorSlider = useRef(null);
   const navItems = [
     {
       icon: <AiOutlineHome />,
@@ -46,41 +46,26 @@ export default function Navbar() {
     },
   ];
 
-  function NavbarItems(props: {
-    icon: JSX.Element;
-    name: String;
-    index: number;
-  }) {
-    return (
-      <div
-        className={`${
-          activePageIndex === props.index
-            ? " bg-[#030308] text-white"
-            : " bg-transparent text-gray-400 "
-        } relative flex items-center py-[1rem] px-[1.8rem] text-[1.1rem] cursor-pointer rounded-t-[1rem]`}
-        onClick={() => {
-          setActivePageIndex(props.index);
-        }}
-      >
-        <span className="pr-[1rem] rounded-full text-[1.5rem]">
-          {props.icon}
-        </span>
-        <h3 className=" pl-[0.5rem]">{props.name}</h3>
-      </div>
-    );
-  }
-
   return (
     <div className="sticky bg-[#141422] rounded-b-[1rem]">
       <div className="relative flex items-center justify-center gap-[3rem] px-[4rem] pt-[1rem]">
         {navItems.map((item, index) => {
           return (
-            <NavbarItems
-              key={index}
-              icon={item.icon}
-              name={item.name}
-              index={index}
-            />
+            <div
+              className={`${
+                activePageIndex === index
+                  ? " bg-[#030308] text-white"
+                  : " bg-transparent text-gray-400 "
+              } relative flex items-center py-[1rem] px-[1.8rem] text-[1.1rem] cursor-pointer rounded-t-[1rem]`}
+              onClick={() => {
+                setActivePageIndex(index);
+              }}
+            >
+              <span className="pr-[1rem] rounded-full text-[1.5rem]">
+                {item.icon}
+              </span>
+              <h3 className=" pl-[0.5rem]">{item.name}</h3>
+            </div>
           );
         })}
         <div className="mb-[0.5rem] p-[0.5rem] bg-gray-800 hover:bg-gray-700 rounded-full text-gray-300 cursor-pointer">
@@ -91,3 +76,14 @@ export default function Navbar() {
     </div>
   );
 }
+
+// function NavbarItems(props: {
+//   icon: JSX.Element;
+//   name: String;
+//   index: number;
+// }) {
+
+//   return (
+
+//   );
+// }
